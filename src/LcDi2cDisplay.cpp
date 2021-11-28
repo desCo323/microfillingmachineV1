@@ -27,13 +27,13 @@ void LcDi2cDisplay::initDisplay(){
 
    
     lcd.setCursor(0, 0);
-    lcd.print("Micro Dosis Machine ");
+    lcd.print("MicroFillingMachine");
     lcd.setCursor(0, 1);
-    lcd.print("  v1");
+    lcd.print("By F.Ebert 2021");
     lcd.setCursor(0, 2);
-    lcd.print(" By Frithjof Ebert 2021");
+    lcd.print("CalValue/1Ml: " + String(dauerProMl));
     //lcd.print(millis() / 1000);
-    delay(1000);   
+    delay(3000);   
 }
 
 void LcDi2cDisplay::printDisplay(String z1, String z2, String z3, String z4){

@@ -2,6 +2,7 @@
 #include "LcDi2cDisplay.h"
 #include "Hardware.h"
 #include "variabelen.h"
+#include <EEPROM.h>
   LcDi2cDisplay display;
   Hardware hardware;
 
@@ -14,6 +15,35 @@
   boolean testlauf=false;
   boolean ergebnissanzeige = false;
   boolean speichern = false;
+byte by;
+
+
+   void dauerSpeichern(long lo, int adr){
+     Serial.println("in dauerSpeichern " + String(lo));
+
+    for(int i=0;i< 4;i++) {
+    by = (lo >> ((3-i)*8)) & 0x000000ff; 
+    EEPROM.write(adr+i, by);
+  }
+} // eepromWriteLong
+  
+long eepromReadLong(int adr) {
+    // long int Wert aus 4 Byte EEPROM lesen
+    // Eingabe : adr bis adr+3
+    // Ausgabe : long Wert
+    // 
+    // Matthias Busse 23.5.2014 Version 1.0
+
+    long lo=0;
+
+    for(int i=0;i< 3;i++){
+      lo += EEPROM.read(adr+i);
+     lo = lo << 8;
+    }
+   lo += EEPROM.read(adr+3);
+    return lo;
+} // eepromReadLong
+  
 
 
   void motorsteuerung(){
@@ -38,11 +68,17 @@
 }
 
 void setup() {
-  display.initDisplay();
+ 
   hardware.setRotaryZero();
   Serial.begin(9600);
   systemState =0;
   hardware.OneButtonInit();
+  dauerProMl = eepromReadLong(0);
+  Serial.println("Boot: DauerproMl: " + String(dauerProMl));
+  display.initDisplay();
+  //Kalibrationswert auslesen und Temp Speichern
+
+
 }
 
 void loop() {
@@ -123,15 +159,14 @@ if (systemState == 1)
   if (ergebnissanzeige == true && testlauf == false && speichern == false)
   {
     Serial.println("Ergebn Anzeige");
-   // display.printDisplay("Kalibrieren BEENDET","10ml in",String(dauer/1000),"Sekunden");
+   
     display.printDisplay("Kalibrieren BEENDET","50ml in " + String(dauer/1000) +" Sek.", "Speichern= Menue Druecken", "Neustart = Start");
     if(swStartButton == true){
       Serial.println("Neustart d. Messung");
       resetKalVariabelen();
       Serial.println("Neustart");
     }
-   // ergebnissanzeige = false;
-   Serial.println("dauer: " + String(dauer));
+
 
 
 
@@ -148,7 +183,10 @@ if (systemState == 1)
      delay(1000);
        Serial.println("GESPEICHERT");
    speichern = true;
-   //HIER FEST SPEICHERN
+   dauerSpeichern(dauerProMl,0);
+    dauerProMl = eepromReadLong(0);
+  Serial.println("Ausgelesen: " + String(dauerProMl));
+   Serial.println("DauerGespeichert: " + String(dauerProMl));
    systemState =0;
   }
 
