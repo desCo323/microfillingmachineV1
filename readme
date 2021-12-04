@@ -1,5 +1,8 @@
 Das ist die Beschreibung.
 Die Micro Filling Machine 
+
+
+
 Dies ist die ERSTE Veröffentlichungsversion des Projektes – Mit der Zeit wird sich noch einiges Ändern.
 Die Micro Filling Machine ist eine kleine Abfüllmaschine für Flüssigkeiten.
 Die Idee der Abfüllmaschine ist, eine genaue Menge Flüssigkeiten in ein Gefäß zu füllen. 
@@ -17,6 +20,11 @@ Die Steuersoftware ist bei GitHub veröffentlicht. Und kann einfach mit Platform
 Dies ist die erste Version die veröffentlicht wird. Später möchte ich noch einfachere Dateien erstellen damit man auch ohne Programmierkenntnisse die Software einfach installieren kann. Die Software ist rudimentär funktionsfähig, kann aber noch um viele Fellfunktionen erweitert werden.
 Die Bauteile sind möglichst günstig aber gut gewählt, sodass sie auch ohne große Kenntnisse angeschlossen werden können. Bei Interesse erstelle ich auch noch eine genaue Schritt für Schritt Anleitung. 
 Sie ist einfach aufzubauen, und kann mit drei 3-D Drucken auf jedem Standard 20 × 20 cm 3-D Drucker gedruckt werden. Die Elektronik ist so einfach wie möglich gehalten und kann eigentlich von jedem mit einfachen elektronischen Kenntnissen gebaut werden. (Hinweis: Arbeiten mit 220 V erfordern in Deutschland besondere Fachkenntnisnachweise. Ich rate jedem dringend diese Arbeiten nur durch autorisiertes Personal vornehmen zu lassen.) Die Maschine arbeitet mit zwölf und 5 V. Ein Netzteil ist notwendig.
+
+Links: 
+3D Files bei Thinkiverse: https://www.thingiverse.com/thing:5154791
+Sorcecode bei GitHub: https://github.com/desCo323/microfillingmachineV1
+
 
 Bauteile:
 •	3d Teile für das Gehäuse
