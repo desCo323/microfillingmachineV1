@@ -1,1 +1,30 @@
 Das ist die Beschreibung.
+Die Micro Filling Machine 
+Dies ist die ERSTE Veröffentlichungsversion des Projektes – Mit der Zeit wird sich noch einiges Ändern.
+Die Micro Filling Machine ist eine kleine Abfüllmaschine für Flüssigkeiten.
+Die Idee der Abfüllmaschine ist, eine genaue Menge Flüssigkeiten in ein Gefäß zu füllen. 
+Die Maschine ist so designt, dass sie Standard SodaStream Flaschen, Bierflaschen und ähnliche Flaschen bis zu 10 cm Durchmesser und bis zu 27 cm Höhe verarbeiten kann. Sie wird einfach eingestellt und ist möglichst einfach zu bedienen.
+Eine kleine Schlauchpumpe (Peristaltikpumpe ) . Die Flüssigkeiten. 
+Fetures: 
+Nachdem kalibrieren kann die Software im Automatikmodus eine eingestellte Flasche erkennen, und eine in Milliliter wählbare Menge Flüssigkeit abfüllen.
+Über ein Menü wird die Maschine einmalig kalibriert.
+Sie erkennt im Automatischen Modus wenn eine Flasche eingesetzt ist und füllt dann eine eingestellte Menge in die Flasche.
+
+Sie eignet sich überall dort wo man in Flaschen oder Gläser bestimmte Mengen einer Flüssigkeit, zum Beispiel einen Sirup einfüllen möchte.
+Beim Hobby Braun eignet sich die Maschine um eine Zuckerlösung in die Bierflaschen zu pumpen, um eine exakte Menge Zucker in jede einzelne Flasche zu bekommen. (Carbonisierung) .
+Gesteuert wird die Maschine durch einen Arduino Nano Micro Controller.
+Die Steuersoftware ist bei GitHub veröffentlicht. Und kann einfach mit PlatformIO heruntergeladen und auf einen Arduino Nano installiert werden.
+Dies ist die erste Version die veröffentlicht wird. Später möchte ich noch einfachere Dateien erstellen damit man auch ohne Programmierkenntnisse die Software einfach installieren kann. Die Software ist rudimentär funktionsfähig, kann aber noch um viele Fellfunktionen erweitert werden.
+Die Bauteile sind möglichst günstig aber gut gewählt, sodass sie auch ohne große Kenntnisse angeschlossen werden können. Bei Interesse erstelle ich auch noch eine genaue Schritt für Schritt Anleitung. 
+Sie ist einfach aufzubauen, und kann mit drei 3-D Drucken auf jedem Standard 20 × 20 cm 3-D Drucker gedruckt werden. Die Elektronik ist so einfach wie möglich gehalten und kann eigentlich von jedem mit einfachen elektronischen Kenntnissen gebaut werden. (Hinweis: Arbeiten mit 220 V erfordern in Deutschland besondere Fachkenntnisnachweise. Ich rate jedem dringend diese Arbeiten nur durch autorisiertes Personal vornehmen zu lassen.) Die Maschine arbeitet mit zwölf und 5 V. Ein Netzteil ist notwendig.
+
+Bauteile:
+•	3d Teile für das Gehäuse
+•	I2C LCD Display: 4 Zeilen 20 Zeichen  z.B: https://amzn.to/3onYABT* (ca 10€)
+•	Arduino Nano https://amzn.to/31trYxI* (ca 8€) (Mit schon verlöteten Pins)
+•	DC Mosfet Modul zum schalten der Pumpe: https://amzn.to/3dlewi0* (ca 2€)
+•	Switch 10mm z.B https://amzn.to/3Dm0o2v*  (ca 1€)
+•	Rotery Encoder ky040 z.B https://amzn.to/3xRoOzM* ca 2€
+•	Dosierpumpe zb https://amzn.to/3EoE2Pn* ca 25€
+•	Ein paar Jumper Kabel zum Verbinden oder nem einach andere Kabel. Ca 7€ https://amzn.to/3po6vi0*
+•	(* Hinweis: Diese Links sind Amazon Afiliate Links. Durch einen Klick auf den Link verteuert es sich nicht, aber ein paar Cent Provision erhalte ich dafür.)
