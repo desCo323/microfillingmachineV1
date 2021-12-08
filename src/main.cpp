@@ -5,7 +5,7 @@
 #include <EEPROM.h>
   LcDi2cDisplay display;
   Hardware hardware;
-
+//PublicVersion
   int menueItem =0;
 
   //Kalibriervariabelen
